@@ -94,10 +94,10 @@ console.log(content.split(' '))
 
 ### String katas
 
-[Convert a string to an array](https://www.codewars.com/kata/57e76bc428d6fbc2d500036d)
-[Capitalization and Mutability](https://www.codewars.com/kata/595970246c9b8fa0a8000086/javascript)
-[Abbreviate a Two Word Name](https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3)
-[Remove First and Last Character](https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0)
+- [Convert a string to an array](https://www.codewars.com/kata/57e76bc428d6fbc2d500036d)
+- [Capitalization and Mutability](https://www.codewars.com/kata/595970246c9b8fa0a8000086/javascript)
+- [Abbreviate a Two Word Name](https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3)
+- [Remove First and Last Character](https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0)
 
 ## Array methods
 
@@ -118,6 +118,56 @@ const companies = [
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]
 ```
+
+### find
+
+find returns the value of the first element in the provided array that satisfies the provided testing function. If it doesn't find a matching value it return undefined
+
+```js
+const array = [5, 12, 8, 130, 44]
+
+const found = array.find((element) => element > 10)
+
+console.log(found)
+// expected output: 12
+```
+
+### findIndex
+
+similar to find but return the index of the first matching element, if no element is found it returns -1
+
+```js
+const array = [5, 12, 8, 130, 44]
+
+const found = array.findIndex((element) => element > 10)
+
+console.log(found)
+// expected output: 1
+```
+
+### some
+
+Checks if any item in an array passes the condition. A good use case would be checking for user privileges.
+
+```js
+const userPrivileges = ['user', 'user', 'user', 'admin']
+const containsAdmin = userPrivileges.some((element) => element === 'admin')
+// containsAdmin will be equal to true
+```
+
+### every
+
+Similar to .some(), but checks if all items in an array pass a condition.
+
+```js
+const ratings = [3, 5, 4, 3, 5]
+const goodOverallRating = ratings.every((rating) => rating >= 3)
+// goodOverallRating will be equal to true
+```
+
+### includes
+
+Checks if an array contains a certain value. It’s similar to .some(),but instead of looking for a condition to pass, it looks if the array contains a specific value.
 
 ### forEach
 
@@ -172,3 +222,8 @@ array.reduce((accumulator, currentValue, index, array) => /* do something */, in
 
 // Combine Methods
 ```
+
+### Array katas
+
+- [Sum of positive](https://www.codewars.com/kata/5715eaedb436cf5606000381)
+- [Fake Binary](https://www.codewars.com/kata/57eae65a4321032ce000002d)
